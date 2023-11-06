@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<body style="background-color: pink;">
+ 
+<h2>Registration Forms</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Poorni"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Suresh"><br><br>
+  <label for="age">Age:</label><br>
+  <input type="number" id="A" value="25"><br><br>
+  <label for="fname">DOB:</label><br>
+  <input type="date" ><br><br>
+  <label for="g">Gender:</label><br>
+  <input type="radio" name="gender" id="m" value="male">
+  <label for="m">Male</label>
+  <input type="radio" name="gender" id="m" value="male">
+  <label for="m">Female</label><br><br>
+  <label for=mn >Mobile Number: </label><br>
+  <input type="number" id="mn" value:(not less than 10 digits)><br><br>
+   <label for="c">City</label><br>
+  <input type="text" id="m" value="Chennai"><br><br>
+   <label for="h" >Hobbies: </label><br>
+   <input type="checkbox" id="hobby" value="Dancing" >
+   <label for="text" >Dancing </label>  
+   <input type="checkbox" id="hobby" value="Dancing" >
+   <label for="text" >Singing </label>  
+   <input type="checkbox" id="hobby" value="Dancing" >
+   <label for="text" >Skating </label> <br><br>
+   <label for="text" >Courses applied for</label>
+   <input type="checkbox" id="hobby" value="Dancing" >
+   <label for="text" >BCA </label>  
+   <input type="checkbox"  >
+   <label for="text" >B.sc </label><br><br>
+    
+ 
+  
+  <input type="submit" value="Submit">
+  </style>
+</form> 
+
+
+
+
+</body>
+</html>
+
+<!-- 2.pagination -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="pagination">
+           <button class="bt1"onclick="backBtn()"><img src="pngwing.com.png" >prev</button> 
+          
+           <ul>
+            <li class="link active" value="1">1</li>
+            <li class="link"value="2" onclick="activelink()">2</li>
+            <li class="link" value="3"onclick="activelink()">3</li>
+            <li class="link" value="4" onclick="activelink()">4</li>
+            <li class="link" value="5"onclick="activelink()">5</li>
+            <li class="link"  value="6" onclick="activelink()">6</li>
+            <li class="link" value="7" onclick="activelink()" >7</li>
+</ul> 
+<button class="bt2" onclick="nextBtn()"><img src="pngwing.com.png" >next</button>
+
+
+        </div>
+    </div>
+<script>
+
+ let link=document.getElementsByClassName("link");
+ let currentvalue=1;
+
+ function activelink(){
+    for(l of link){
+        l.classList.remove("active");
+        }
+    event.target.classList.add("active");
+    currentvalue=event.target.value;
+ }
+
+ function backBtn(){
+    if(currentvalue>1){
+        for(l of link){
+        l.classList.remove("active");
+        }
+        currentvalue--;
+        link[currentvalue-1].classList.add("active");
+    } }
+
+    function nextBtn(){
+    if(currentvalue<7){
+        for(l of link){
+        l.classList.remove("active");
+        }
+        currentvalue++;
+        link[currentvalue-1].classList.add("active");
+    } }
+
+
+
+</script>
+
+</body>
+</html>
